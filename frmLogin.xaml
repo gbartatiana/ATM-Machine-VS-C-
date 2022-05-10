@@ -1,0 +1,27 @@
+﻿<Window x:Class="BankATM.frmLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankATM"
+        mc:Ignorable="d"
+        Title="Login Window - ATM Management System" Height="420" Width="900">
+    <Grid HorizontalAlignment="Left">
+
+        <WrapPanel Orientation="Vertical">
+            <Image Source="Resources/atmmachine.jpg" Height="416.591" Width="392.362"/>
+            <TextBox x:Name="textBox" Height="71.905" Width="517.856" Text="WELCOME TO YOUR ATM MACHINE" Background="#FF34456D" FontSize="24" Foreground="#FFF0F0F0" TextAlignment="Center" VerticalContentAlignment="Center"/>
+        </WrapPanel>
+        <Label Content="Your Client Code:" HorizontalAlignment="Right" FontSize="16" Width="238.357" Margin="0,99.64,70.001,246.469" FontWeight="Bold" Target="{Binding ElementName=loginClientCode}"/>
+        <TextBox x:Name="loginClientCode" Margin="572.937,129.163,159.908,201.713" FontSize="24" TextChanged="loginClientCode_TextChanged_1" TextAlignment="Center" FontWeight="Bold" MaxLength="4" IsUndoEnabled="False"/>
+        <Label Content="Your 4-Digit PIN:" HorizontalAlignment="Right" FontSize="16" Width="168.796" Margin="0,193.687,139.562,152.422" FontWeight="Bold"/>
+        <PasswordBox x:Name="loginPin" Margin="572.937,225.33,159.908,105.546" FontSize="18" PasswordChanged="loginPin_PasswordChanged_1" MaxLength="4" />
+
+
+        <Button x:Name="btnMainLogin" Content="_Login" Margin="520.609,309.962,261.086,36.153" Background="#FF34456D" Foreground="#FFF0F0F0" Click="btnMainLogin_Click" IsDefault="True" IsEnabled="False" />
+        <Button x:Name="btnMainClose" Content="_Close" Margin="661.384,309.962,120.311,36.153" Background="#FF34456D" Foreground="#FFF0F0F0" Click="btnMainClose_Click" IsCancel="True"/>
+
+    </Grid>
+
+
+</Window>
